@@ -32,13 +32,17 @@ function getHumanChoice() {
 
 // logic to play a single round
 function playRound(humanChoice, computerChoice) {    
-    if (!humanChoice) { // if the value humanChoice is falsy, then:
-        console.log("No valid move.");
+    if (!humanChoice) { // if the value humanChoice is falsy/not valid, then nothing happens:
         return;
     }
 
     humanChoice = humanChoice.toLowerCase(); // make the humanChoice lowercase for case sensibility
-    console.log(`Human choice: ${humanChoice}, Computer choice: ${computerChoice}`); // returns the choices
+    computerChoice = computerChoice.toLowerCase();
+
+    const humanChoiceCapitalized = capitalizeFirstLetter(humanChoice); // the variable stores the value of the "capitalize" function
+    const computerChoiceCapitalized = capitalizeFirstLetter(computerChoice);
+
+    console.log(`Human choice: ${humanChoiceCapitalized}, Computer choice: ${computerChoiceCapitalized}`); // returns the choices
 
     if (humanChoice === computerChoice) {        
             console.log("It's a tie!");
@@ -52,6 +56,14 @@ function playRound(humanChoice, computerChoice) {
     } else {
         console.log("Computer wins!");
         computerScore++;
+    }
+}
+
+function capitalizeFirstLetter(string) {
+    if (!string) {
+        return string;
+    } else {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
     }
 }
 
