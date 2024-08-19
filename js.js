@@ -5,6 +5,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// addEventlistener for the buttons that call the playRound() with the playerSelection when btn is clicked
+let btnRock = document.querySelector('.btnRock');
+let btnPaper = document.querySelector('.btnPaper');
+let btnScissors = document.querySelector('.btnScissors');
+
+
+
 // randomly returns rock, paper or scissors
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3);
@@ -20,7 +27,9 @@ function getComputerChoice() {
 
 // takes the user choice and returns it
 function getHumanChoice() {
-    let humanChoice = prompt("Insert your move").toLowerCase(); // convert to lowercase
+    // let humanChoice = prompt("Insert your move").toLowerCase(); // convert to lowercase // commented out because now we have a button to play
+
+    let humanChoice = ;
 
     if (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
         console.log("Your move is incorrect. Please insert a move, next time.");

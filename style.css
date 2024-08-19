@@ -1,0 +1,7 @@
+/* CSS file for Rock Paper Scissors */
+
+.btnRock,
+.btnPaper,
+.btnScissors {
+    text-align: center;
+}
