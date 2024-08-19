@@ -59,7 +59,7 @@ function playRound(humanChoice, computerChoice) {
     // const computerChoiceCapitalized = capitalizeFirstLetter(computerChoice);;
 
     let currentScore = document.querySelector('.currentScore');
-    currentScore.textContent = (`Human choice: ${humanChoice}, Computer choice: ${computerChoice}`); // returns the choices
+    currentScore.textContent = (`Human choice: ${humanChoice}. Computer choice: ${computerChoice}`); // returns the choices
 
     const para = document.createElement("p");
 
